@@ -35,7 +35,7 @@
                [:p {} "Anywhere you can run Lua code, you can run Fennel code."]
 
                [:ul {:id "where"}
-                [:li {} [:a {:href "https://minetest.net/"} "video"]
+                [:li {} [:a {:href "https://www.minetest.net/"} "video"]
                  [:a {:href "https://love2d.org"} "games"]]
                 [:li {} [:a {:href "https://awesomewm.org/"} "window managers"]]
                 [:li {} [:a {:href "https://openresty.org/en/"} "web"]

@@ -7,7 +7,7 @@ TAGDIRS := main $(foreach tag, $(TAGS), v${tag})
 TAGSOURCES := changelog reference api
 
 HTML := tutorial.html api.html reference.html lua-primer.html changelog.html \
-	setup.html rationale.html
+	setup.html rationale.html from-clojure.html
 LUA := fennelview.lua
 
 # This requires pandoc 2.0+

@@ -97,6 +97,8 @@
                  "will catch you up if you don't already know Lua."]
                 [:li {} "The" [:a {:href "/reference"} "Reference"] "lists "
                  "out all built-in special forms and what they're for."]
+                [:li {} "The" [:a {:href "/from-clojure"} "Fennel from Clojure"]
+                 "guide helps if you have a background in Clojure."]
                 [:li {} "The" [:a {:href "/api"} "API listing"]
                  "explains how to embed Fennel into a Lua program."]
                 [:li {} "The" [:a {:href "/changelog"} "Changelog"]

@@ -36,7 +36,8 @@
 
                [:ul {:id "where"}
                 [:li {} [:a {:href "https://www.minetest.net/"} "video"]
-                 [:a {:href "https://love2d.org"} "games"]]
+                 [:a {:href "https://love2d.org"} "game"]
+                 [:a {:href "https://tic80.com"} "dev"]]
                 [:li {} [:a {:href "https://awesomewm.org/"} "window managers"]]
                 [:li {} [:a {:href "https://openresty.org/en/"} "web"]
                  [:a {:href "https://github.com/bakpakin/moonmint"} "servers"]]

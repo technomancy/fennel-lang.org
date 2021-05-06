@@ -16,6 +16,7 @@ PANDOC ?= pandoc --syntax-definition fennel-syntax.xml \
 	--lua-filter=promote-h1-to-title.lua
 
 fennel/fennel: ; make -C fennel fennel
+fennel/fennel.lua: ; make -C fennel fennel.lua
 
 index.html: main.fnl sample.html fennel/fennel
 	fennel/fennel main.fnl $(TAGDIRS) > index.html
@@ -69,7 +70,8 @@ clean: cleantagdirs ; rm -f $(HTML) index.html $(LUA)
 
 upload: $(HTML) $(LUA) $(TAGDIRS) index.html init.lua repl.fnl fennel.css \
 		fengari-web.js repl-worker.js repl-worker.lua .htaccess fennel \
-		see.html see.lua antifennel.lua see-worker.lua see-worker.js logo.svg
+		see.html see.lua antifennel.lua see-worker.lua see-worker.js logo.svg \
+		fennel/fennel.lua
 	rsync -r $^ fenneler@fennel-lang.org:fennel-lang.org/
 
 conf/%.html: conf/%.fnl fennel/fennel ; fennel/fennel $< > $@

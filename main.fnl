@@ -118,7 +118,7 @@
                 [:a {:href "https://lists.sr.ht/%7Etechnomancy/fennel"}
                  "the mailing list"]
                 " and the #fennel channel"
-                [:a {:href "https://webchat.freenode.net/"} "on Freenode"]
+                [:a {:href "https://libera.chat"} "on Libera.Chat"]
                 " and "
                 [:a {:href "https://matrix.to/#/!rnpLWzzTijEUDhhtjW:matrix.org"}
                  "on Matrix"] "."

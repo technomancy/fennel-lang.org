@@ -133,3 +133,5 @@ hr { margin-top: 2em; clear: both; }
     border-radius: 3px;
     border: 1px solid #ddd;
 }
+
+h3 code { color: #007020; }

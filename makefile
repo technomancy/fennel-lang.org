@@ -25,10 +25,13 @@ index.html: main.fnl sample.html fennel/fennel
 fennelview.lua: fennel/fennel fennel/src/fennel/view.fnl
 	fennel/fennel --compile fennel/src/fennel/view.fnl > $@
 
-%.html: fennel/%.md ; $(PANDOC) --toc -o $@ $^
+fennel-syntax.xml: syntax.fnl fennel/fennel
+	fennel/fennel $< > $@
+
+%.html: fennel/%.md fennel-syntax.xml; $(PANDOC) --toc -o $@ $<
 
 # Special overrides; for instance rationale does not need a TOC
-rationale.html: fennel/rationale.md ; $(PANDOC) -o $@ $^
+rationale.html: fennel/rationale.md ; $(PANDOC) -o $@ $<
 
 # TODO: for now all main and tags are generated the same;
 # there might be time, when we have "generations" of fennel
@@ -63,7 +66,7 @@ TAGDOCS := $(foreach tagdir, $(TAGDIRS), \
 		${tagdir}/${file}))
 
 build: html lua tagdocs
-html: $(HTML) index.html
+html: fennel-syntax.xml $(HTML) index.html
 tagdocs: tags $(TAGDOCS)
 lua: $(LUA)
 clean: cleantagdirs ; rm -f $(HTML) index.html $(LUA)

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- See https://docs.kde.org/stable5/en/applications/katepart/highlight.html -->
+<language version="6" kateversion="5.0" name="Fennel"
+          section="Scripts" extensions="*.fnl"
+          mimetype="text/x-fennel"
+          author="Phil Hagelberg (technomancy@gmail.com)"
+          license="MIT"
+          priority="9">
+  <highlighting>
